@@ -1,0 +1,49 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.container > h2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cards {
+  margin: 1vh auto;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr);
+  gap: 1rem;
+}
+
+.cards > a {
+  text-decoration: none;
+}
+
+.cards > a:link {
+  color: black;
+} 
+
+.cards > a:visited {
+  color: black;
+} 
+
+.cards > a:hover {
+  color: #43a047;
+}
+
+.cards > a:active {
+  color: #43a047;
+}
+
+@media (min-width: 1000px) {
+  .cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1600px) {
+  .cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
