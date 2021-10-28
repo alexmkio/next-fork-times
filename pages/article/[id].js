@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { useRouter } from "next/router"
-// import { ExternalLink } from 'react-external-link';
+import { ExternalLink } from 'react-external-link';
 import styles from '../../styles/Details.module.css'
-import { getData } from '../../utils/apiCalls'
+// import { getData } from '../../utils/apiCalls'
 
 // export const getStaticPaths = async () => {
 //   let section = 'home'
@@ -21,14 +21,12 @@ import { getData } from '../../utils/apiCalls'
 //   }
 // }
 
-// export const getStaticProps = async (context) => {
-//   let section = 'home'
-//   let fetchedData = await getData(section)
-//   let matchingArticle = fetchedData.results.find(currentArticle => currentArticle.short_url.split("/")[3] === context.params.id)
+// export const getStaticProps = () => {
+//   const router = useRouter()
 
 //   return {
 //     props: {
-//       article: matchingArticle
+//       article: router.query
 //     }    
 //   }
 // }
@@ -54,11 +52,8 @@ export const Details = () => {
         <dt>Section:</dt>
         <dd>{router.query.section}</dd>
 
-        {/* <dt>URL:</dt>
+        <dt>URL:</dt>
         <dd><ExternalLink href={router.query.short_url} /></dd>
-
-        <dt>Picture:</dt>
-        <dd><ExternalLink href={router.query.multimedia[0].url} /></dd> */}
 
         <dt>Abstract:</dt>
         <dd>{router.query.abstract}</dd>
@@ -71,5 +66,10 @@ export const Details = () => {
     </section>
   )
 }
+
+// Details.getInitialProps = ({ query }) => {
+//   console.log('query', query)
+//   return query
+// }
 
 export default Details;
