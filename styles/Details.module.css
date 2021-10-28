@@ -11,14 +11,15 @@
   align-items: center;
 }
 
-.container > dt {
+.container > dl > dt {
   margin-top: 1rem;
   font-size: .9rem;
   line-height: 1;
 }
 
-.container > dd {
+.container > dl > dd {
   font-size: 1.4rem;
   text-transform: capitalize;
   margin: 0;
+  text-align: center;
 }

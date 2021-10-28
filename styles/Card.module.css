@@ -17,23 +17,23 @@
 }
 
 .card > dl {
+  margin: 0;
   padding: 0rem;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.card > dt {
+.card > dl > dt {
   margin-top: 1rem;
   font-size: .9rem;
   line-height: 1;
 }
 
-.card > dd {
+.card > dl > dd {
+  margin: 0;
   font-size: 1.4rem;
   text-transform: capitalize;
-  margin-left: -100%;
-  margin-right: -100%;
   text-align: center;
 }
 
