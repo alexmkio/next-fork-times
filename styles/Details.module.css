@@ -1,0 +1,24 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container > dl {
+  padding: 0rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.container > dt {
+  margin-top: 1rem;
+  font-size: .9rem;
+  line-height: 1;
+}
+
+.container > dd {
+  font-size: 1.4rem;
+  text-transform: capitalize;
+  margin: 0;
+}

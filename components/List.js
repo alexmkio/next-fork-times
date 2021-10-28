@@ -6,8 +6,16 @@ export const List = ({ articles }) => {
   let articleCards = articles.map(currentArticle => {
     let unique = currentArticle.short_url.split("/")[3]
     return (
-      <Link href={`/article/${unique}`} key={`${unique}`} >
-        <Card key={`${unique}`} article={currentArticle} />
+      <Link
+        href={{
+          pathname: `/article/${unique}`,
+          query: currentArticle,
+        }}
+        key={`${unique}`}
+      >
+        <a>
+          <Card key={`${unique}`} article={currentArticle} />
+        </a>
       </Link>
     )
   })
