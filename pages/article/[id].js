@@ -55,9 +55,6 @@ export const Details = () => {
         <dt>URL:</dt>
         <dd><ExternalLink href={router.query.short_url} /></dd>
 
-        <dt>Photo:</dt>
-        <dd><ExternalLink href={router.query.multimedia[0].url} /></dd>
-
         <dt>Abstract:</dt>
         <dd>{router.query.abstract}</dd>
       </dl>
@@ -76,3 +73,6 @@ export const Details = () => {
 // }
 
 export default Details;
+
+{/* <dt>Photo:</dt>
+<dd><ExternalLink href={router.query.multimedia[0].url} /></dd> */}

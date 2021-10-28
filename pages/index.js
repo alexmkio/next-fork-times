@@ -28,7 +28,7 @@ const Home = ({ data }) => {
   useEffect(() => {
     setArticles(sortByPublishedDesc(data))
     setSorted('pubDesc')
-  }, [])
+  }, [data])
   
   const sortArticles = (event) => {
     if (event === 'pubAsc') {
